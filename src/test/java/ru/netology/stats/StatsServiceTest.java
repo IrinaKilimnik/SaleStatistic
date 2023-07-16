@@ -3,7 +3,6 @@ package ru.netology.stats;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 class StatsServiceTest {
 
@@ -12,7 +11,7 @@ class StatsServiceTest {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
 
-        long actual = service.SalesSum(sales);
+        long actual = service.salesSum(sales);
         long expected = 180;
 
         Assertions.assertEquals(expected, actual);
@@ -23,7 +22,7 @@ class StatsServiceTest {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
 
-        long actual = service.MediumSales(sales);
+        long actual = service.mediumSales(sales);
         long expected = 15;
 
         Assertions.assertEquals(expected, actual);
@@ -34,7 +33,7 @@ class StatsServiceTest {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
 
-        int actual = service.MonthMaxSale(sales);
+        int actual = service.monthMaxSale(sales);
         int expected = 8;
 
         Assertions.assertEquals(expected, actual);
@@ -45,7 +44,7 @@ class StatsServiceTest {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
 
-        int actual = service.MonthMinSale(sales);
+        int actual = service.monthMinSale(sales);
         int expected = 9;
 
         Assertions.assertEquals(expected, actual);
@@ -56,7 +55,7 @@ class StatsServiceTest {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
 
-        int actual = service.MonthsBelowMiddle(sales);
+        int actual = service.monthsBelowMiddle(sales);
         int expected = 5;
 
         Assertions.assertEquals(expected, actual);
@@ -67,7 +66,7 @@ class StatsServiceTest {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
 
-        int actual = service.MonthsHigherMiddle(sales);
+        int actual = service.monthsHigherMiddle(sales);
         int expected = 5;
 
         Assertions.assertEquals(expected, actual);

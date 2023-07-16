@@ -1,7 +1,7 @@
 package ru.netology.stats;
 
 public class StatsService {
-    public long SalesSum(long[] sales) {
+    public long salesSum(long[] sales) {
         long total = 0;
         for (long sale : sales) {
             total += sale;
@@ -9,7 +9,7 @@ public class StatsService {
         return total;
     }
 
-    public long MediumSales(long[] sales) {
+    public long mediumSales(long[] sales) {
         long total = 0;                                 //long total = sum(sales);
         for (long sale : sales) {
             total += sale;
@@ -18,7 +18,7 @@ public class StatsService {
         return medium;
     }
 
-    public int MonthMaxSale(long[] sales) {
+    public int monthMaxSale(long[] sales) {
         int month = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] >= sales[month]) {
@@ -29,7 +29,7 @@ public class StatsService {
         return month + 1;
     }
 
-    public int MonthMinSale(long[] sales) {
+    public int monthMinSale(long[] sales) {
         int month = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] <= sales[month]) {
@@ -40,20 +40,22 @@ public class StatsService {
         return month + 1;
     }
 
-    public int MonthsBelowMiddle(long[] sales) {
+    public int monthsBelowMiddle(long[] sales) {
         int counter = 0;
+        long mediana = mediumSales(sales);
         for (long sale : sales) {
-            if (sale < MediumSales(sales)) {
+            if (sale < mediana) {
                 counter++;
             }
         }
         return counter;
     }
 
-    public int MonthsHigherMiddle(long[] sales) {
+    public int monthsHigherMiddle(long[] sales) {
         int counter = 0;
+        long mediana = mediumSales(sales);
         for (long sale : sales) {
-            if (sale > MediumSales(sales)) {
+            if (sale > mediana) {
                 counter++;
             }
         }
